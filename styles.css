@@ -1,0 +1,257 @@
+body {
+  background-color: #FF0000;
+  color: rgb(16, 0, 0);
+}
+
+.pokedex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#headerTitle {
+  font-size: 3rem;
+  color: #FFF;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.circle-container {
+  position: relative;
+  width: 160px;
+  height: 120px;
+}
+
+.poke_headers {
+  color: #FFDE00;
+  background-color: rgb(27, 29, 41);
+  width: 560px;
+  height: 80px;
+  font-weight: 500;
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 12px;
+  margin: 2rem auto;
+
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #3B4CCA;
+  border-radius: 50%;
+  position: absolute;
+  left: 260px;
+  top: 10px;
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 12px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), transparent 70%);
+}
+
+
+.mini-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    inset 0 0 6px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+ 
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), transparent 60%);
+}
+
+.red {
+  background-color: #FF0000;
+  left: 375px;
+}
+
+.yellow {
+  background-color: #FFDE00;
+  left: 415px;
+}
+
+.green {
+  background-color: #00C853;
+  left: 455px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #FF0000 0%, #CC0000 100%);
+  padding: 1rem;
+  padding-right: 40px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.nav-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 1rem;
+  width: 100%;
+}
+
+.nav-row li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-row li a {
+  width: 160px;
+  height: 60px;
+  text-decoration: none;
+  background-color: #3B4CCA;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#main-doc {
+  margin-left: 240px; 
+  padding: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.code {
+  background-color: rgb(29, 31, 44);
+  color: #FFF;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  html, body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3B4CCA;
+    z-index: 100;
+  }
+
+  .nav-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .nav-row li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-row li a {
+    width: 90%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 1rem;
+    padding-bottom: 15rem;
+  }
+
+  .poke_headers {
+    width: 90%;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+
+  .sidebar-right {
+    display: none; 
+  }
+
+  .circle-container {
+    width: 180px; 
+    height: 100px;
+    margin: 0 auto; 
+    position: relative;
+  }
+
+  .main-circle {
+    left: 30px; 
+    top: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .red {
+    left: 130px; 
+  }
+
+  .yellow {
+    left: 160px;
+  }
+
+  .green {
+    left: 190px;
+  }
+
+  .circle-container {
+    width: 120px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  #headerTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .pokedex-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

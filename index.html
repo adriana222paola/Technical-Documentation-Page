@@ -1,0 +1,234 @@
+<!-- By: Adriana Perez -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Added Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Crea tu propio Pokédex</title>
+</head>
+
+
+<body>
+    <header class="pokedex-header">
+      <div class="circle-container">
+        <div class="main-circle"></div>
+        <div class="mini-circle red"></div>
+        <div class="mini-circle yellow"></div>
+        <div class="mini-circle green"></div>
+      </div>
+      <h1 id="headerTitle">Pokédex</h1>
+    </header>
+    <br><br>
+  <nav id="navbar">
+    <header>
+    <ul class="nav-row">
+      <li><a href="#Introducción" class="nav-link">Introducción</a></li>
+      <li><a href="#Estructura_HTML" class="nav-link">Estructura HTML</a></li>
+      <li><a href="#Estilos_con_CSS" class="nav-link">Estilos con CSS</a></li>
+    </ul>
+    <ul class="nav-row second-row">
+      <li><a href="#Datos_Dinámicos" class="nav-link">Datos Dinámicos</a></li>
+      <li><a href="#Interactividad" class="nav-link">Interactividad</a></li>
+      <li><a href="#Accesibilidad" class="nav-link">Accesibilidad</a></li>
+    </ul>
+  </nav>
+  </header>
+  <br>
+  <main id="main-doc" class="container">
+   <section id="Introducción" class="main-section">
+  <header class="poke_headers">Introducción</header>
+      <article>
+        <h4>¿Qué es una Pokédex?</h4>
+        <p>
+          La Pokédex es una herramienta digital inspirada en el universo Pokémon que permite registrar,
+          visualizar y organizar información sobre distintas criaturas. En este proyecto, aprenderás a construir
+          una Pokédex básica utilizando HTML y CSS, enfocándote en la estructura semántica, el diseño responsivo y
+          las buenas prácticas de accesibilidad. Este ejercicio no solo te ayudará a mejorar tus habilidades de
+          maquetación,
+          sino que también te permitirá aplicar conceptos técnicos en un contexto divertido y visualmente estimulante.
+        </p>
+        <p>
+          A lo largo de esta documentación, exploraremos cómo crear tarjetas individuales para cada Pokémon,
+          cómo estilizar la interfaz para que sea atractiva y funcional, y cómo preparar el proyecto para futuras
+          integraciones con JavaScript o APIs externas. Aunque el contenido es ficticio, el enfoque técnico es real:
+          aprenderás a construir una base sólida que puede adaptarse a proyectos más complejos en el futuro.
+        </p>
+
+        <p>Este proyecto es ideal para quienes están comenzando en el desarrollo web y desean aplicar conceptos reales
+          en un entorno creativo.</p>
+        <p>Además de aprender HTML y CSS, este ejercicio te prepara para trabajar con datos dinámicos y mejorar la
+          accesibilidad de tus interfaces.</p>
+        <p>La Pokédex puede expandirse fácilmente para incluir filtros, búsquedas y animaciones.</p>
+
+        <ul>
+          <h4>¿Qué información se necesita?</h4>
+          <li>- Nombre del Pokémon</li>
+          <li>- Tipo o categoría (por ejemplo: fuego, agua, planta)</li>
+          <li>- Estadísticas básicas (HP, ataque, defensa)</li>
+          <li>- Botón de interacción (por ejemplo: “Ver más” o “Capturar”)</li>
+          <li>- Habilidad especial (por ejemplo: Intimidación, Clorofila)</li>
+          <li>- Evoluciones disponibles (por ejemplo: Charmander → Charmeleon → Charizard)</li>
+        </ul>
+      </article>
+    </section>
+    <br>
+    <br>
+<section id="Estructura_HTML" class="main-section">
+  <header class="poke_headers">Estructura HTML</header>
+
+      <br>
+      <br>
+      <article>
+        <h4>Estructura Base</h4>
+        <p>
+          La Pokédex se compone de tarjetas individuales para cada
+          Pokémon. Cada tarjeta incluye nombre, tipo, imagen y estadísticas.
+          Estas tarjetas deben seguir una estructura semántica que facilite la lectura tanto para humanos como para
+          tecnologías de asistencia.
+
+        </p>
+        <p>Un ejemplo básico incluye:</p>
+        <div class="code">
+          <ul>
+            <li><code>&lt;div class="pokemon-card"&gt;</code>: contenedor principal</li>
+            <li><code>&lt;h3&gt;</code>: nombre del Pokémon</li>
+            <li><code>&lt;img&gt;</code>: imagen del Pokémon</li>
+            <li><code>&lt;ul&gt;</code>: lista de estadísticas</li>
+          </ul>
+        </div>
+        <br><br>
+        <div class="code">
+          <code>
+          <div class="pokemon-card">
+  <h3>Nombre del Pokémon</h3>
+  <img src="ruta/imagen.png" alt="Imagen de Pokémon">
+  <ul>
+    <li>Tipo: Agua</li>
+    <li>HP: 45</li>
+    <li>Ataque: 49</li>
+    <li>Defensa: 49</li>
+    <li>Habilidad: Torrente</li>
+    <li>Evolución: Squirtle → Wartortle → Blastoise</li>
+  </ul>
+  <button>Ver más</button>
+  </div>
+        </code>
+    </section>
+    <br>
+    <br>
+<section id="Estilos_con_CSS" class="main-section">
+  <header class="poke_headers">Estilos con CSS</header>
+
+      <br>
+      <br>
+      <article>
+        <h4>Estilizando la Pokédex</h4>
+        <p>El diseño visual debe ser atractivo, pero también funcional. Aquí se recomienda usar Flexbox para distribuir
+          las tarjetas y aplicar media queries para asegurar que se adapten a distintos tamaños de pantalla.
+          Puedes añadir efectos 3D, sombras suaves o paletas temáticas según el tipo de Pokémon para enriquecer la
+          experiencia visual.
+        </p>
+        <div class="code">
+          <pre><code>
+  .pokedex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.pokemon-card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #f8f8f8;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .pokemon-card {
+    width: 100%;
+  }
+}
+
+            </code></pre>
+        </div>
+      </article>
+    </section>
+    <br>
+    <br>
+<section id="Datos_Dinámicos" class="main-section">
+  <header class="poke_headers">Datos Dinámicos</header>
+
+      <br>
+      <br>
+      <article>
+        <h4>Integración de Datos</h4>
+        <p>Para hacer la Pokédex dinámica, puedes usar JavaScript para consumir datos desde una API como <a
+            href="https://pokeapi.co/">PokeAPI</a>. Esto permite mostrar información real y actualizada.</p>
+        <div class="code">
+          <pre><code>
+fetch("https://pokeapi.co/api/v2/pokemon/1")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.name); // "bulbasaur"
+  });
+  </code></pre>
+        </div>
+      </article>
+    </section>
+    <br>
+    <br>
+<section id="Interactividad" class="main-section">
+  <header class="poke_headers">Interactividad</header>
+
+      <br>
+      <br>
+      <article>
+        <h4>Interactividad para el Usuario</h4>
+        <p>Agrega botones para filtrar por tipo, buscar por nombre o mostrar estadísticas detalladas, mejora la
+          experiencia del usuario.</p>
+        <div class="code">
+          <pre><code>
+document.querySelector("#search").addEventListener("input", function(e) {
+  const query = e.target.value.toLowerCase();
+  // Filtrar tarjetas por nombre
+});
+  </code></pre>
+        </div>
+      </article>
+    </section>
+    <br>
+    <br>
+<section id="Accesibilidad" class="main-section">
+  <header class="poke_headers">Accesibilidad</header>
+
+      <br>
+      <br>
+      <article>
+        <h4>Buenas Prácticas de Accesibilidad</h4>
+        <p>Una Pokédex accesible garantiza que todos los usuarios puedan interactuar con ella.</p>
+        <div class="code">
+          <ul>
+            <li><code>&lt;nav&gt;</code> para la barra de navegación</li>
+            <li><code>alt=""</code> en imágenes</li>
+            <li><code>Asegura que todos los botones sean accesibles por teclado (tabindex, aria-label).</code></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+  <br>
+  <br>
+</body>
+
+</html>
